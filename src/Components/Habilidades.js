@@ -36,8 +36,8 @@ function Habilidades() {
         ) 
     }
 
-    const img_back = [node, js, mysql, python, python, mongo, aws]
-    const nom_back = ["Node.js", "Express.js", "MySQL", "Django", "Python", "MongoDB", "Amazon Web Services"]
+    const img_back = [node, js, mysql]
+    const nom_back = ["Node.js", "Express.js", "MySQL"]
 
     let elementos_back = []
     for(let back = 0; back < img_back.length; back++)

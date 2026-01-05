@@ -48,9 +48,26 @@ function Cabecera(props) {
           <svg viewBox="0 0 8 6" aria-hidden="true" className="ml-2 h-auto w-2 stroke-zinc-800 transition group-hover:stroke-teal-400 dark:group-hover:stroke-zinc-400"><path d="M1.75 1.75 4 4.25l2.25-2.5" fill="none" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path></svg>
         </button>
 
-        {/* <NavLink to="/curriculum">sdasd</NavLink> */}
+        <div className=''>
+          <a href="#" className="flex items-center text-gray-700 hover:text-gray-800">
+            <img
+              alt=""
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Flag_of_the_United_States.svg/1235px-Flag_of_the_United_States.svg.png"
+              className="block h-auto w-5 shrink-0"
+            />
+            <span className="ml-3 block text-sm font-medium">English</span>
+          </a>
+          {/* <a href="#" className="flex items-center text-gray-700 hover:text-gray-800">
+            <img
+              alt=""
+              src="https://upload.wikimedia.org/wikipedia/commons/9/9f/Flag_of_the_Dominican_Republic.svg"
+              className="block h-auto w-5 shrink-0"
+            />
+            <span className="ml-3 block text-sm font-medium">Español</span>
+          </a> */}
+        </div>
 
-        <div className='sm:block hidden w-9 h-9 rounded-full border-2 border-none' src={process.env.PUBLIC_URL + "img/perfil.png"} alt='Perfil'/>
+        {/* <div className='sm:block hidden w-9 h-9 rounded-full border-2 border-none' src={process.env.PUBLIC_URL + "img/perfil.png"} alt='Perfil'/> */}
       </nav>
 
 
