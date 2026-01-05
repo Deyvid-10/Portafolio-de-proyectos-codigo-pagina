@@ -1,4 +1,5 @@
 import './App.css';
+import "./i18n";
 import Cabecera from './Components/Cabecera.js'
 import Sobre_mi from './Components/Sobre_mi.js'
 import Habilidades from './Components/Habilidades.js'
@@ -7,7 +8,7 @@ import Curriculum from './Components/Curriculum.js';
 import Contactos from './Components/Contactos.js';
 import Pie_pagina from './Components/Pie_pagina.js';
 
-import { BrowserRouter as Router, Route, Link, Routes, NavLink} from 'react-router-dom';
+import { BrowserRouter as Router, Route,  Routes, NavLink} from 'react-router-dom';
 
 function App() {
 

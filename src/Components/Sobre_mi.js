@@ -1,8 +1,12 @@
 import Cabecera from "./Cabecera";
 import Pie_pagina from "./Pie_pagina.js";
 
+import { useTranslation } from "react-i18next";
+
 function Sobre_mi() {
 
+    const { t } = useTranslation();
+    
     let activo = 'mx-2 font-medium text-teal-400 cursor-pointer'
     let inactivo = 'mx-2 font-medium transition hover:text-teal-400 cursor-pointer'
 
@@ -64,18 +68,11 @@ function Sobre_mi() {
                         </div>
                     </div>
                     <div>
-                        <h1 className="md:text-5xl text-2xl font-bold tracking-tight text-zinc-700">¡Hola!, soy <span className="text-teal-400">Deyvid Marmolejo</span>. Ingeniero en sistemas y computación y desarrollador web.</h1>
+                        <h1 className="md:text-5xl text-2xl font-bold tracking-tight text-zinc-700">{t("about-title-1")}<span className="text-teal-400">{t("about-title-2")}</span>{t("about-title-3")}</h1>
                         <div>
                             <br/>
                             <p>
-                                A pesar de mi falta de experiencia laboral formal, he desarrollado habilidades sólidas a
-                                través de la práctica en proyectos personales y la capacitación continua en instituciones
-                                reconocidas a nivel nacional y en plataformas en línea. Mi experiencia informal demuestra mi
-                                capacidad para afrontar desafíos con confianza. Desde la creación de interfaces atractivas con
-                                HTML, CSS y JavaScript en el front-end, hasta la implementación de APIs con Node.js, Express y
-                                MySQL en el back-end, estoy preparado para enfrentar desafíos en ambos extremos tecnológicos.
-                                Me entusiasma la oportunidad de colaborar en proyectos desafiantes y seguir creciendo
-                                profesionalmente.
+                                {t("about-detail")}
                             </p>
                         </div>
                     </div>

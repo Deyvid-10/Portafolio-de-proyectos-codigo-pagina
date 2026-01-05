@@ -1,29 +1,32 @@
 import React, { useState } from 'react'
-import {BrowserRouter as Router, Route, Link, Routes, NavLink, useLocation} from 'react-router-dom';
+// import {BrowserRouter as Router, Route, Link, Routes, NavLink, useLocation} from 'react-router-dom';
+
+import { useTranslation } from "react-i18next";
 
 function Cabecera(props) {
-  
+    const { t, i18n } = useTranslation();
+    const items = t("navbar-items", { returnObjects: true });
+    const currentLang = i18n.language;
+
     let [menu, setMenu] = useState(true)
 
     function verMenu()
     {
       setMenu(!menu)
     }
-  
+    console.log(currentLang === "en");
+    
     return (
   
       <nav className='flex sm:justify-evenly justify-around items-center mt-6 fixed left-auto right-auto w-full z-10'>
         <a href="/"><img className='w-9 rounded-full border-2 border-gray-400' src={process.env.PUBLIC_URL + "img/perfil.png"} alt='Perfil'/></a>
 
-   
-
         <ul className='hidden sm:flex bg-white text-zinc-800 text-sm pointer-events-auto shadow-md rounded-full p-2'>
-    
-          <li className={props.sobre_mi}><a href="/">Sobre mi</a></li>
-          <li className={props.habilidades}><a href="/habilidades">Habilidades</a></li>
-          <li className={props.portafolio}><a href="/portafolio">Portafolio</a></li>
-          <li className={props.curriculum}><a href="/curriculum">Curriculum</a></li>
-          <li className={props.contactos}><a href="/contactos">Contactos</a></li>
+          <li className={props.sobre_mi}><a href="/">{items[0]}</a></li>
+          <li className={props.habilidades}><a href="/habilidades">{items[1]}</a></li>
+          <li className={props.portafolio}><a href="/portafolio">{items[2]}</a></li>
+          <li className={props.curriculum}><a href="/curriculum">{items[3]}</a></li>
+          <li className={props.contactos}><a href="/contactos">{items[4]}</a></li>
         </ul>
 
         <div className={menu ? "hidden" : "sm:hidden fixed inset-0 z-50 bg-zinc-800/40 backdrop-blur-sm"}></div>
@@ -35,11 +38,11 @@ function Cabecera(props) {
               <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
             </svg>
           </div>
-          <li className={props.sobre_mi}><a href="/">Sobre mí</a></li>
-          <li className={props.habilidades}><a href="/habilidades">Habilidades</a></li>
-          <li className={props.portafolio}><a href="/portafolio">Portafolio</a></li>
-          <li className={props.curriculum}><a href="/curriculum">Curriculum</a></li>
-          <li className={props.contactos}><a href="/contactos">Contactos</a></li>
+          <li className={props.sobre_mi}><a href="/">{items[0]}</a></li>
+          <li className={props.habilidades}><a href="/habilidades">{items[1]}</a></li>
+          <li className={props.portafolio}><a href="/portafolio">{items[2]}</a></li>
+          <li className={props.curriculum}><a href="/curriculum">{items[3]}</a></li>
+          <li className={props.contactos}><a href="/contactos">{items[4]}</a></li>
         </ul>
      
 
@@ -49,23 +52,33 @@ function Cabecera(props) {
         </button>
 
         <div className=''>
-          <a href="#" className="flex items-center text-gray-700 hover:text-gray-800">
+          {currentLang === "en" && <button onClick={() => i18n.changeLanguage("es")} className="flex items-center text-gray-700 hover:text-gray-800">
             <img
               alt=""
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Flag_of_the_United_States.svg/1235px-Flag_of_the_United_States.svg.png"
-              className="block h-auto w-5 shrink-0"
+              className="block h-auto w-5"
             />
-            <span className="ml-3 block text-sm font-medium">English</span>
-          </a>
-          {/* <a href="#" className="flex items-center text-gray-700 hover:text-gray-800">
+            <span className="ml-2 block text-sm font-medium">English</span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4 ml-1">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+            </svg>
+
+          </button>}
+
+          {currentLang === "es" && <button  onClick={() => i18n.changeLanguage("en")} className="flex items-center text-gray-700 hover:text-gray-800">
             <img
               alt=""
               src="https://upload.wikimedia.org/wikipedia/commons/9/9f/Flag_of_the_Dominican_Republic.svg"
               className="block h-auto w-5 shrink-0"
             />
-            <span className="ml-3 block text-sm font-medium">Español</span>
-          </a> */}
+            <span className="ml-2 block text-sm font-medium">Español</span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4 ml-1">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+            </svg>
+          </button>}
         </div>
+
+        
 
         {/* <div className='sm:block hidden w-9 h-9 rounded-full border-2 border-none' src={process.env.PUBLIC_URL + "img/perfil.png"} alt='Perfil'/> */}
       </nav>

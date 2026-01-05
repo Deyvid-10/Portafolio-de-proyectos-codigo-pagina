@@ -17,7 +17,11 @@ import postman from "../Img/postman.svg"
 import Cabecera from "./Cabecera"
 import Pie_pagina from "./Pie_pagina"
 
+import { useTranslation } from "react-i18next";
+
 function Habilidades() {
+
+    const { t } = useTranslation();
 
     let activo = 'mx-2 font-medium text-teal-400 cursor-pointer'
     let inactivo = 'mx-2 font-medium transition hover:text-teal-400 cursor-pointer'
@@ -85,9 +89,9 @@ function Habilidades() {
         <div>
             <Cabecera sobre_mi = {inactivo} habilidades = {activo} portafolio = {inactivo} curriculum = {inactivo} contactos = {inactivo}/>
             <div className="pt-28 lg:px-0 px-3 mx-auto customContainer">
-            <h1 className="md:text-5xl text-2xl font-bold tracking-tight text-zinc-700">Desarrollo web versátil.</h1>
+            <h1 className="md:text-5xl text-2xl font-bold tracking-tight text-zinc-700">{t("skills-title")}</h1>
             <br/>
-            <p>Sólido conocimiento en el desarrollo de aplicaciones web utilizando una amplia gama de tecnologías y frameworks para adaptarse a las necesidades específicas del proyecto.</p>
+            <p>{t("skills-detail")}</p>
                 <br/>
                 <br/>
                 <br/>

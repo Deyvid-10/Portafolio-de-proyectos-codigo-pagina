@@ -1,7 +1,11 @@
 import Cabecera from "./Cabecera"
 import Pie_pagina from "./Pie_pagina"
 
+import { useTranslation } from "react-i18next";
+
 function Contactos() {
+
+    const { t } = useTranslation();
 
     let activo = 'mx-2 font-medium text-teal-400 cursor-pointer'
     let inactivo = 'mx-2 font-medium transition hover:text-teal-400 cursor-pointer'
@@ -11,9 +15,9 @@ function Contactos() {
     <div>
         <Cabecera sobre_mi = {inactivo} habilidades = {inactivo} portafolio = {inactivo} curriculum = {inactivo} contactos = {activo}/>
         <div className="pt-28 lg:px-0 px-3 mx-auto customContainer">
-        <h1 className="md:text-5xl text-2xl font-bold tracking-tight text-zinc-700">¡Conéctate conmigo! Estoy listo para colaborar en tus próximos proyectos</h1>
+        <h1 className="md:text-5xl text-2xl font-bold tracking-tight text-zinc-700">{t("contact-title")}</h1>
         <br/>
-        <p>¡Estoy emocionado por las oportunidades futuras! Si estás interesado en mi trabajo o tienes alguna pregunta, no dudes en contactarme. Estoy abierto a nuevas oportunidades y ansioso por colaborar en proyectos emocionantes.</p>
+        <p>{t("contact-detail")}</p>
         <br/>
         <br/>
         <br/>
