@@ -147,22 +147,6 @@ function Portafolio() {
                         <img src={tauro_shop} alt="tauro-shop" className="rounded-3xl shadow-md"></img>
                         <div className="flex justify-center mt-4">{botones.boton_proyecto("https://github.com/Deyvid-10/Tauro-Shop", "https://main--tauro-shop.netlify.app/")}</div>
                     </div>
-                    <div className="crud_registro_escolar">
-                        <br></br>
-                        <h5 className="md:text-4xl text-2xl font-bold tracking-tight text-zinc-700">CRUD Registro escolar (+ API)</h5>
-                        <br></br>
-                        <p>En este CRUD busco simular un registro de estudiantes de una escuela. He creado esta página con el objetivo de ofrecer una solución efectiva y eficiente para la gestión de registros escolares, realizando las cuatro tareas de un CRUD creación de registros, lectura y visualización, actualización de registros y eliminación de registros.</p>
-                        <br></br>
-                        {lenguaje[0]}
-                        {lenguaje[1]}
-                        {lenguaje[2]}
-                        {lenguaje[5]}
-                        {lenguaje[6]}
-                        {lenguaje[12]}
-            
-                        <img src={crud_registro_escolar} alt="Nova Store" className="rounded-3xl shadow-md"></img>
-                        <div className="flex justify-center mt-4">{botones.boton_proyecto("https://github.com/Deyvid-10/CRUD-Registro-escolar", "https://crud-registro-escolar.netlify.app/")}</div>
-                    </div>
                     
                    
                     <Pie_pagina/>

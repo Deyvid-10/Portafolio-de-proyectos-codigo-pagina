@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-// import {BrowserRouter as Router, Route, Link, Routes, NavLink, useLocation} from 'react-router-dom';
+import {Link, NavLink} from 'react-router-dom';
 
 import { useTranslation } from "react-i18next";
 
@@ -19,14 +19,14 @@ function Cabecera(props) {
     return (
   
       <nav className='flex sm:justify-evenly justify-around items-center mt-6 fixed left-auto right-auto w-full z-10'>
-        <a href="/"><img className='w-9 rounded-full border-2 border-gray-400' src={process.env.PUBLIC_URL + "img/perfil.png"} alt='Perfil'/></a>
+        <Link to="/"><img className='w-9 rounded-full border-2 border-gray-400' src={process.env.PUBLIC_URL + "img/perfil.png"} alt='Perfil'/></Link>
 
         <ul className='hidden sm:flex bg-white text-zinc-800 text-sm pointer-events-auto shadow-md rounded-full p-2'>
-          <li className={props.sobre_mi}><a href="/">{items[0]}</a></li>
-          <li className={props.habilidades}><a href="/habilidades">{items[1]}</a></li>
-          <li className={props.portafolio}><a href="/portafolio">{items[2]}</a></li>
-          <li className={props.curriculum}><a href="/curriculum">{items[3]}</a></li>
-          <li className={props.contactos}><a href="/contactos">{items[4]}</a></li>
+          <li className={props.sobre_mi}><Link to="/">{items[0]}</Link></li>
+          <li className={props.habilidades}><Link to="/habilidades">{items[1]}</Link></li>
+          <li className={props.portafolio}><Link to="/portafolio">{items[2]}</Link></li>
+          <li className={props.curriculum}><Link to="/curriculum">{items[3]}</Link></li>
+          <li className={props.contactos}><Link to="/contactos">{items[4]}</Link></li>
         </ul>
 
         <div className={menu ? "hidden" : "sm:hidden fixed inset-0 z-50 bg-zinc-800/40 backdrop-blur-sm"}></div>
