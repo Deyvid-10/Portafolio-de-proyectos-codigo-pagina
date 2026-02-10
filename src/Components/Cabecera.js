@@ -38,11 +38,11 @@ function Cabecera(props) {
               <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
             </svg>
           </div>
-          <li className={props.sobre_mi}><a href="/">{items[0]}</a></li>
-          <li className={props.habilidades}><a href="/habilidades">{items[1]}</a></li>
-          <li className={props.portafolio}><a href="/portafolio">{items[2]}</a></li>
-          <li className={props.curriculum}><a href="/curriculum">{items[3]}</a></li>
-          <li className={props.contactos}><a href="/contactos">{items[4]}</a></li>
+          <li className={props.sobre_mi}><Link href="/">{items[0]}</Link></li>
+          <li className={props.habilidades}><Link href="/habilidades">{items[1]}</Link></li>
+          <li className={props.portafolio}><Link href="/portafolio">{items[2]}</Link></li>
+          <li className={props.curriculum}><Link href="/curriculum">{items[3]}</Link></li>
+          <li className={props.contactos}><Link href="/contactos">{items[4]}</Link></li>
         </ul>
      
 
